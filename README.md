@@ -1,101 +1,101 @@
-# Student Attachment Management System
+Student Attachment Management System
 
-## Project Description
-The Student Attachment Management system is a python-based application designed to help manage and monitor student attachment records.
-The system stores student information, organisation details, attachment dates, attachment status and progress.
-It also provides a dashboard with charts to make the attachment ingormation easier to understand and monitor.
+Project Description
 
-## Objectives
-- Manage student attachment records.
-- Store organization and placement details.
-- Track attachment dates, status, and progress.
-- Perform CRUD operations on student records.
-- Provide a dashboard for easy monitoring.
+The Student Attachment Management System is a Python-based application designed to help manage and monitor student attachment records. The system stores student information, organization details, attachment dates, attachment status, and progress. It also provides a dashboard with charts to make attachment information easier to understand and monitor.
 
-## 🛠️ Technologies Used
+Objectives
 
-- **Python** – Used to develop the application logic and implement the CRUD operations for managing student records.
+* Manage student attachment records.
+* Store organization and placement details.
+* Track attachment dates, status, and progress.
+* Perform CRUD operations on student records.
+* Provide a dashboard for easy monitoring.
 
-- **SQLite** – Used as the database to store student, organization, and attachment information.
+🛠️ Technologies Used
 
-- **SQL** – Used to create tables, insert records, retrieve information, update records, and delete records from the SQLite database.
+Python – Used to develop the application logic and implement CRUD operations for managing student records.
 
-- **Matplotlib** – Used to create the dashboard charts for visualizing attachment status and student progress.
+SQLite – Used as the database to store student, organization, and attachment information.
 
-- **VS Code** – Used as the development environment for writing, testing, and running the Python code.
+SQL – Used to create tables, insert records, retrieve information, update records, and delete records from the SQLite database.
 
-  ##  System Features
+Matplotlib – Used to create dashboard charts for visualizing attachment status and student progress.
 
-### 1. Create
+VS Code – Used as the development environment for writing, testing, and running the Python code.
+
+System Features
+
+1. Create
+
 Allows users to add new student and attachment records.
 
-### 2. Read
+2. Read
+
 Allows users to view student, organization, and attachment information.
 
-### 3. Update
+3. Update
+
 Allows users to update student and attachment information.
 
-### 4. Delete
+4. Delete
+
 Allows users to remove student records.
 
-### 5. Dashboard
+5. Dashboard
+
 Provides a summary of attachment information using charts, including attachment status and student progress.
 
-## 🗄️ Database
+🗄️ Database
 
-The system uses an SQLite database to store and manage the project data.
+The system uses an SQLite database to store and manage project data.
 
 The main tables are:
 
-- **Students** – Stores student identification, contact, programme, and year of study.
-- **Organizations** – Stores organization names, industries, counties, and contact persons.
-- **Attachments** – Stores attachment placement details, dates, status, and progress percentage.
+* Students – Stores student identification, contact, programme, and year of study.
+* Organizations – Stores organization names, industries, counties, and contact persons.
+* Attachments – Stores attachment placement details, dates, status, and progress percentage.
 
-The tables are connected using student and organization identifiers to allow related information to be retrieved together.
+The tables are connected using student and organization identifiers, allowing related information to be retrieved together.
 
-## 📊 Dashboard & Data Visualization
+📊 Dashboard & Data Visualization
 
 The system includes a dashboard that provides a summary of student attachment information.
 
 The dashboard displays:
 
-- Total number of students
-- Number of ongoing attachments
-- Number of completed attachments
-- Number of not started attachments
-- Student attachment progress
+* Total number of students
+* Number of ongoing attachments
+* Number of completed attachments
+* Number of not started attachments
+* Student attachment progress
 
-**Matplotlib** is used to create visual charts that make the attachment data easier to understand and monitor.
+Matplotlib is used to create visual charts that make the attachment data easier to understand and monitor.
 
-## 🚀 How to Run the Project
+🚀 How to Run the Project
 
-### 1. Clone the repository
+1. Clone the repository
 
-```bash
 git clone https://github.com/Ngina-07/Python-Capstone-Project.git
-### 2. Open the project folder
 
-```bash
+2. Open the project folder
+
 cd Python-Capstone-Project
-```
-### 3. Install the required dependencies
 
-```bash
+3. Install the required dependencies
+
 pip install -r requirements.txt
-```
-### 4. Run the application
 
-```bash
+4. Run the application
+
 python app.py
-```
-### 5. Run the dashboard
 
-```bash
+5. Run the dashboard
+
 python dashboard.py
-```
-## 📁 Project Structure
 
-```text
+📁 Project Structure
+
 Python-Capstone-Project/
 │
 ├── app.py
@@ -106,13 +106,29 @@ Python-Capstone-Project/
 ├── project_template.md
 ├── README.md
 └── .gitignore
-```
-## 💡 Project Benefits
 
-- Organizes student attachment information in one system.
-- Makes it easier to monitor attachment status and progress.
-- Reduces the difficulty of managing records manually.
-- Makes student and organization information easier to access.
-- Provides visual summaries through the dashboard.
+💡 Project Benefits
+
+* Organizes student attachment information in one system.
+* Makes it easier to monitor attachment status and progress.
+* Reduces the difficulty of managing records manually.
+* Makes student and organization information easier to access.
+* Provides visual summaries through charts and dashboards.
+* Helps users keep attachment information organized and easy to monitor.
+
+🔮 Future Improvements
+
+The system could be improved in the future by:
+
+* Adding user login and authentication for students, supervisors, and administrators.
+* Adding email or notification reminders for attachment deadlines.
+* Allowing supervisors to submit student progress reports through the system.
+* Adding more detailed reports and data visualizations.
+* Developing a web-based version that can be accessed from different devices.
+
+
+
+
+
 
 
