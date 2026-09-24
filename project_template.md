@@ -1,26 +1,19 @@
 1. What is the problem you are solving?
-> Businesses or your audience care about problems. Make the problem clear and relatable
 
-
+Difficulties in managing and monitoring student attachment placements ,progress,organisation details and completion status
 
 
 2. What tools did you use?
-> Python? GeoPanadas? Google Big Query?
-> Tell your audience how you got the answer,  tools show your capability
-> Dive deep in this in your technical  article
-
-
+Python,SQlite,SQL and VS Code
+I used python to develop the application. 
+SQLite to store and manage student,organisation and attachment data.
+SQL to perform CRUD operations and retrieve information from the database.
 
 
 3. What insights did you or do you want to discover?/ What Solutions do you want to offer? Do People even need these solutions?
-> Don’t just say “dashboard done.”
-> Share the “aha!” moments, they matter more that the visuals
-
-
-
+The system provides a simple way to manage student attachment records and monitor their progress. It also allows users to view student, organization, and attachment details and perform CRUD operations. The dashboard will help summarize attachment status and progress.
 
 
 
 4. How would a business or a community (for Social Impact Projects) benefit from your work?
-> Be specific. Think money saved, process improves, better decisions made
-> That’s your **real value**
+The system saves time, improves attachment record management, makes student progress easier to monitor, and supports better decisions using organized information.
