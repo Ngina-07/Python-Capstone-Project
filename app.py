@@ -80,39 +80,78 @@ def read():
 
 # UPDATE
 def update():
-    student_id = input("Student ID: ")
+    student_id = input("Enter Student ID to update: ").strip()
 
-    name = input("New name: ")
-    email = input("New email: ")
-    programme = input("New programme: ")
-    year = int(input("New year of study: "))
+    # 1. Fetch current student record
+    cursor.execute(
+        "SELECT name, email, programme, year_of_study FROM students WHERE student_id = ?",
+        (student_id,),
+    )
+    student = cursor.fetchone()
 
-    attachment_id = input("New attachment ID: ")
-    organization_id = input("New organization ID: ")
-    start_date = input("New start date (YYYY-MM-DD): ")
-    end_date = input("New end date (YYYY-MM-DD): ")
-    status = input("New status (Ongoing/Completed/Not Started): ")
-    progress = int(input("New progress percentage: "))
+    if not student:
+        print("Student not found!")
+        return
 
-    cursor.execute("""
+    curr_name, curr_email, curr_prog, curr_year = student
+
+    print(
+        "\nPress ENTER to keep current value, or type a new value to update:"
+    )
+    new_name = input(f"New name [{curr_name}]: ").strip() or curr_name
+    new_email = input(f"New email [{curr_email}]: ").strip() or curr_email
+    new_prog = input(f"New programme [{curr_prog}]: ").strip() or curr_prog
+    new_year = input(f"New year of study [{curr_year}]: ").strip() or curr_year
+
+    # 2. Update students table
+    cursor.execute(
+        """
         UPDATE students
         SET name = ?, email = ?, programme = ?, year_of_study = ?
         WHERE student_id = ?
-    """, (name, email, programme, year, student_id))
+        """,
+        (new_name, new_email, new_prog, new_year, student_id),
+    )
 
-    cursor.execute("""
-        UPDATE attachments
-        SET attachment_id = ?, organization_id = ?,
-            start_date = ?, end_date = ?,
-            status = ?, progress_percentage = ?
-        WHERE student_id = ?
-    """, (attachment_id, organization_id, start_date, end_date,
-          status, progress, student_id))
+    # 3. Fetch and update attachment details safely (without modifying attachment_id)
+    cursor.execute(
+        "SELECT organization_id, start_date, end_date, status, progress_percentage FROM attachments WHERE student_id = ?",
+        (student_id,),
+    )
+    att = cursor.fetchone()
+
+    if att:
+        curr_org, curr_start, curr_end, curr_status, curr_prog_pct = att
+
+        new_org = input(f"New Organization ID [{curr_org}]: ").strip() or curr_org
+        new_start = input(f"New start date [{curr_start}]: ").strip() or curr_start
+        new_end = input(f"New end date [{curr_end}]: ").strip() or curr_end
+        new_status = (
+            input(f"New status [{curr_status}]: ").strip() or curr_status
+        )
+        new_prog_pct = (
+            input(f"New progress percentage [{curr_prog_pct}]: ").strip()
+            or curr_prog_pct
+        )
+
+        cursor.execute(
+            """
+            UPDATE attachments
+            SET organization_id = ?, start_date = ?, end_date = ?, status = ?, progress_percentage = ?
+            WHERE student_id = ?
+            """,
+            (
+                new_org,
+                new_start,
+                new_end,
+                new_status,
+                new_prog_pct,
+                student_id,
+            ),
+        )
 
     connection.commit()
-
-    print("Student and attachment updated!")
-
+    print("\nUpdate completed successfully!")
 
 # DELETE
 def delete():

@@ -1,10 +1,10 @@
-## Student Attachment Management System
+Student Attachment Management System
 
-# Project Description
+Project Description
 
 The Student Attachment Management System is a Python-based application designed to help manage and monitor student attachment records. The system stores student information, organization details, attachment dates, attachment status, and progress. It also provides a dashboard with charts to make attachment information easier to understand and monitor.
 
-# Objectives
+Objectives
 
 * Manage student attachment records.
 * Store organization and placement details.
@@ -12,7 +12,7 @@ The Student Attachment Management System is a Python-based application designed 
 * Perform CRUD operations on student records.
 * Provide a dashboard for easy monitoring.
 
-# 🛠️ Technologies Used
+🛠️ Technologies Used
 
 Python – Used to develop the application logic and implement CRUD operations for managing student records.
 
@@ -24,7 +24,7 @@ Matplotlib – Used to create dashboard charts for visualizing attachment status
 
 VS Code – Used as the development environment for writing, testing, and running the Python code.
 
-# System Features
+System Features
 
 1. Create
 
@@ -46,7 +46,7 @@ Allows users to remove student records.
 
 Provides a summary of attachment information using charts, including attachment status and student progress.
 
-# 🗄️ Database
+🗄️ Database
 
 The system uses an SQLite database to store and manage project data.
 
@@ -58,7 +58,7 @@ The main tables are:
 
 The tables are connected using student and organization identifiers, allowing related information to be retrieved together.
 
-# 📊 Dashboard & Data Visualization
+📊 Dashboard & Data Visualization
 
 The system includes a dashboard that provides a summary of student attachment information.
 
@@ -72,7 +72,7 @@ The dashboard displays:
 
 Matplotlib is used to create visual charts that make the attachment data easier to understand and monitor.
 
-# 🚀 How to Run the Project
+🚀 How to Run the Project
 
 1. Clone the repository
 
@@ -94,7 +94,7 @@ python app.py
 
 python dashboard.py
 
-## 📁 Project Structure
+📁 Project Structure
 
 Python-Capstone-Project/
 │
@@ -107,7 +107,7 @@ Python-Capstone-Project/
 ├── README.md
 └── .gitignore
 
-# 💡 Project Benefits
+💡 Project Benefits
 
 * Organizes student attachment information in one system.
 * Makes it easier to monitor attachment status and progress.
@@ -116,7 +116,7 @@ Python-Capstone-Project/
 * Provides visual summaries through charts and dashboards.
 * Helps users keep attachment information organized and easy to monitor.
 
-# 🔮 Future Improvements
+🔮 Future Improvements
 
 The system could be improved in the future by:
 
@@ -125,10 +125,3 @@ The system could be improved in the future by:
 * Allowing supervisors to submit student progress reports through the system.
 * Adding more detailed reports and data visualizations.
 * Developing a web-based version that can be accessed from different devices.
-
-
-
-
-
-
-
